@@ -32,6 +32,12 @@ describe Station do
   	station.leave_outgoing(train)
   	expect(station.train_count).to eq(0)
   end
+
+  it "should know how many trains are in the station" do
+    2.times{station.accept_incoming(train)}
+    expect(station.train_count).to eq(2)
+  end
+
   
 
 end

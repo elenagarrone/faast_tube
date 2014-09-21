@@ -16,4 +16,5 @@ class Passenger
     	@logged = false
     end
 
+
 end

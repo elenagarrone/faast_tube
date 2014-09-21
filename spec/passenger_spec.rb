@@ -13,7 +13,7 @@ describe Passenger do
         expect(passenger).to be_logged
     end
 
-    it "should be able to exit" do
+    it "should be able to log out" do
     	passenger.log_in
     	passenger.log_out
     	expect(passenger).not_to be_logged

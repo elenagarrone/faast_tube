@@ -1,3 +1,5 @@
+require_relative 'passenger'
+
 class Station
 
 
@@ -10,7 +12,7 @@ class Station
 	end
 
 	def let_inside(passenger)
-		# raise "Sorry you are not logged in" if @logged == false
+		raise "Sorry you are not logged in" if passenger.logged? == false 
 		passengers << passenger
     end
 

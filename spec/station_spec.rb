@@ -13,6 +13,10 @@ describe Station do
     expect(station.passenger_count).to eq(1)
   end
 
+  it "should not let passenger in if not logged in" do
+    expect{ station.let_inside(passenger) }.to raise_error(RuntimeError)
+  end
+
   it "should let passenger out " do
   	station.let_inside(passenger)
   	expect(station.passenger_count).to eq(1)

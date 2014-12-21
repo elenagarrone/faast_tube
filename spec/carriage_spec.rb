@@ -11,13 +11,13 @@ describe Carriage do
   let(:carriage) {Carriage.new}
 
   it "should pick up a passenger" do
-	expect(carriage.passenger_count).to eq(0)
-	carriage.pick_up(passenger)
-	expect(carriage.passenger_count).to eq(1)
+    expect(carriage.passenger_count).to eq(0)
+    carriage.pick_up(passenger)
+    expect(carriage.passenger_count).to eq(1)
   end
 
   it "should release a passenger" do
-  	carriage.pick_up(passenger)
+	  carriage.pick_up(passenger)
     expect(carriage.passenger_count).to eq(1)
     carriage.release(passenger)
     expect(carriage.passenger_count).to eq(0)
